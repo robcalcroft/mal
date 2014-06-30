@@ -1,0 +1,142 @@
+@import "compass/reset";
+@import "compass";
+
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic");
+
+// --------------------- Global -----------------------
+
+// ---------------------- Vars ------------------------
+
+$main-background: #d3c6d8;
+$sidebar-background: #443a49;
+$text-main: $main-background;
+
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+body,html {
+	width: 100%;
+	height: 100%;
+	background-color: $main-background;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+div.container {
+	width: 100%;
+}
+
+// Tooltip customisation
+.tooltipster-default {
+	background-color: $sidebar-background !important;
+	color: $main-background;
+	border: 0 solid rgba(0,0,0,.9) !important;
+}
+
+@mixin rounded-img($size) {
+	width: $size;
+	height: $size;
+	@include border-radius($size/2)
+}
+
+h1 {
+	font-size: 35pt;
+	color: inherit;
+}
+
+// ---------------------- Sidebar ---------------------
+
+div.sidebar {
+	overflow: hidden;
+	white-space: nowrap;
+	a {
+		text-decoration: none;
+		color: inherit;
+		border-bottom: 1px dotted $text-main;
+	}
+	height: 100%;
+	min-width: 3%;
+	position: fixed;
+	background-color: $sidebar-background;
+	padding-top: 20px;
+	//@include box-shadow(#747175 4px 0 6px);
+	.nav-on {
+		color: $sidebar-background;
+		background-color: $main-background;
+	}
+	nav div {
+		@include transition();
+		transition-duration: .2s;
+		&:hover { @extend .nav-on; cursor: pointer }
+		padding: 15px;
+		font-size: 20pt;
+		color: $text-main;
+	}
+
+}
+
+// ------------------- Animations --------------------
+
+@-webkit-keyframes float {
+	0% { top: 78% }
+	25% { top: 79.5 }
+	50% { top: 81% }
+	75% { top: 79.5 }
+	100% { top: 78% }
+}
+
+@keyframes float {
+	0% { top: 78% }
+	25% { top: 79.5 }
+	50% { top: 81% }
+	75% { top: 79.5 }
+	100% { top: 78% }
+}
+
+// ------------------- Main Content -------------------
+
+div.main-container {
+	width: 97%;
+	float: right;
+	#home, #about, #work, #contact {
+		@include clearfix();
+		padding: 20px;
+		color: rgb(64,64,64);
+	}
+	#home {
+		position: relative;
+		div.main-title {
+			font-size: 70pt;
+			position: absolute;
+			top: 50%; left: 50%;
+			margin-left: -249px; margin-top: -93px;
+			div.main-sub-title {
+				text-align: center;
+				color: rgb(130,130,130);
+				font-size: 20pt;
+				letter-spacing: 7px;
+				font-style: italic;
+			}
+		}
+		div.arrow-down {
+			-webkit-animation: float 5s infinite linear;
+			animation: float 5s infinite linear;
+			font-size: 50pt;
+			position: absolute;
+			left: 50%;
+			margin-left: -22px;
+		}
+	}
+	#about {
+		div.about-main {
+			text-align: center;
+			img.about-img {
+				@include rounded-img(148px);
+
+			}
+		}
+	}
+}
