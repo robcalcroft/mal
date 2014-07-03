@@ -1,10 +1,14 @@
 var mal = {
+
+	first : true,
+
 	init : function() {
 		function winHeightChange() { $('#home, #about, #work, #contact').css('minHeight', $(window).height()) }; winHeightChange();
 		$(window).resize(function() {
 			winHeightChange();
 			mal.scrollspy();
 		});
+		$('div.main-title').animate({top: '50%', opacity: 1}, {duration:500})
 		if($(document).scrollTop() == 0) { $('.nav-home').addClass('nav-on') }
 		mal.scrollspy();
 		mal.tooltipster();
@@ -22,6 +26,9 @@ var mal = {
         		max: position.top + $(this).height(),
         		onEnter: function() {
         			$('.nav-' + id).addClass('nav-on');
+        			if(id == 'about' && mal.first) {
+        				$('div.about-main').fadeIn('slow');
+        			}
         		},
         		onLeave: function() {
         			$('.nav-' + id).removeClass('nav-on');

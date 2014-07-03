@@ -139,107 +139,112 @@ div.sidebar nav div:hover {
 }
 
 @-webkit-keyframes float {
-  /* line 84, ../sass/screen.scss */
-  0% {
-    top: 78%;
-  }
-
   /* line 85, ../sass/screen.scss */
-  25% {
-    top: 79.5;
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
   }
 
   /* line 86, ../sass/screen.scss */
-  50% {
-    top: 81%;
-  }
-
-  /* line 87, ../sass/screen.scss */
-  75% {
-    top: 79.5;
-  }
-
-  /* line 88, ../sass/screen.scss */
-  100% {
-    top: 78%;
+  to {
+    -webkit-transform: translate3d(0, 20px, 0);
   }
 }
 
 @keyframes float {
+  /* line 91, ../sass/screen.scss */
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
   /* line 92, ../sass/screen.scss */
-  0% {
-    top: 78%;
-  }
-
-  /* line 93, ../sass/screen.scss */
-  25% {
-    top: 79.5;
-  }
-
-  /* line 94, ../sass/screen.scss */
-  50% {
-    top: 81%;
-  }
-
-  /* line 95, ../sass/screen.scss */
-  75% {
-    top: 79.5;
-  }
-
-  /* line 96, ../sass/screen.scss */
-  100% {
-    top: 78%;
+  to {
+    transform: translate3d(0, 20px, 0);
   }
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 div.main-container {
   width: 97%;
   float: right;
 }
-/* line 104, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 div.main-container #home, div.main-container #about, div.main-container #work, div.main-container #contact {
   overflow: hidden;
   *zoom: 1;
   padding: 20px;
   color: #404040;
 }
-/* line 109, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 div.main-container #home {
   position: relative;
 }
-/* line 111, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 div.main-container #home div.main-title {
   font-size: 70pt;
+  opacity: 0;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   margin-left: -249px;
   margin-top: -93px;
 }
-/* line 116, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 div.main-container #home div.main-title div.main-sub-title {
   text-align: center;
   color: #828282;
   font-size: 20pt;
-  letter-spacing: 7px;
+  letter-spacing: 6px;
   font-style: italic;
 }
-/* line 124, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 div.main-container #home div.arrow-down {
-  -webkit-animation: float 5s infinite linear;
-  animation: float 5s infinite linear;
+  -webkit-animation: float 2.5s infinite linear alternate;
+  animation: float 2.5s infinite linear alternate;
   font-size: 50pt;
   position: absolute;
   left: 50%;
+  top: 79%;
   margin-left: -22px;
+}
+/* line 128, ../sass/screen.scss */
+div.main-container #home div.arrow-down:hover {
+  cursor: pointer;
 }
 /* line 134, ../sass/screen.scss */
 div.main-container #about div.about-main {
+  display: none;
+  background-color: #ecf0f1;
+  -webkit-box-shadow: #828282 0 0 20px 5px;
+  -moz-box-shadow: #828282 0 0 20px 5px;
+  box-shadow: #828282 0 0 20px 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 45px;
   text-align: center;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 15px;
 }
-/* line 136, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
+div.main-container #about div.about-main section {
+  color: #5f5f5f;
+  text-align: left;
+  font-size: 15pt;
+  line-height: 30px;
+  column-count: 3;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+}
+/* line 153, ../sass/screen.scss */
+div.main-container #about div.about-main section::first-letter {
+  font-size: 35pt;
+}
+/* line 157, ../sass/screen.scss */
 div.main-container #about div.about-main img.about-img {
+  margin-bottom: 35px;
   width: 148px;
   height: 148px;
   -webkit-border-radius: 74px;

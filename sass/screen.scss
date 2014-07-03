@@ -81,19 +81,15 @@ div.sidebar {
 // ------------------- Animations --------------------
 
 @-webkit-keyframes float {
-	0% { top: 78% }
-	25% { top: 79.5 }
-	50% { top: 81% }
-	75% { top: 79.5 }
-	100% { top: 78% }
+
+	from { -webkit-transform: translate3d(0, 0, 0); }
+    to { -webkit-transform: translate3d(0, 20px, 0); }
+
 }
 
 @keyframes float {
-	0% { top: 78% }
-	25% { top: 79.5 }
-	50% { top: 81% }
-	75% { top: 79.5 }
-	100% { top: 78% }
+	from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(0, 20px, 0); }
 }
 
 // ------------------- Main Content -------------------
@@ -110,30 +106,56 @@ div.main-container {
 		position: relative;
 		div.main-title {
 			font-size: 70pt;
+			opacity: 0;
 			position: absolute;
-			top: 50%; left: 50%;
+			top: 55%; left: 50%;
 			margin-left: -249px; margin-top: -93px;
 			div.main-sub-title {
 				text-align: center;
 				color: rgb(130,130,130);
 				font-size: 20pt;
-				letter-spacing: 7px;
+				letter-spacing: 6px;
 				font-style: italic;
 			}
 		}
 		div.arrow-down {
-			-webkit-animation: float 5s infinite linear;
-			animation: float 5s infinite linear;
+			-webkit-animation: float 2.5s infinite linear alternate;
+			animation: float 2.5s infinite linear alternate;
 			font-size: 50pt;
 			position: absolute;
-			left: 50%;
+			left: 50%; top: 79%;
 			margin-left: -22px;
+			&:hover {
+				cursor: pointer;
+			}
 		}
 	}
 	#about {
 		div.about-main {
+			display: none;
+			background-color: #ecf0f1;
+			//border-left: 10px solid rgb(64,64,64);
+			@include box-shadow(rgb(130,130,130) 0 0 20px 5px);
+			@include border-radius(3px);
+			padding: 45px;
 			text-align: center;
+			width: 75%;
+			margin: 0 auto;
+			margin-top: 15px;
+			section {
+				color: rgb(95,95,95);
+				text-align: left;
+				font-size: 15pt;
+				line-height: 30px;
+				column-count: 3;
+				-webkit-column-count: 3;
+				-moz-column-count: 3;
+				&::first-letter {
+					font-size: 35pt;
+				}
+			}
 			img.about-img {
+				margin-bottom: 35px;
 				@include rounded-img(148px);
 
 			}
