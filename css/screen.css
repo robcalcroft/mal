@@ -1,5 +1,4 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic");
-/* line 17, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,50 +20,41 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 14, ../sass/screen.scss */
 * {
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
@@ -74,7 +64,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   /* Opera/IE 8+ */
 }
 
-/* line 20, ../sass/screen.scss */
 body, html {
   width: 100%;
   height: 100%;
@@ -83,25 +72,21 @@ body, html {
   font-weight: 300;
 }
 
-/* line 28, ../sass/screen.scss */
 div.container {
   width: 100%;
 }
 
-/* line 33, ../sass/screen.scss */
 .tooltipster-default {
   background-color: #443a49 !important;
   color: #d3c6d8;
   border: 0 solid rgba(0, 0, 0, 0.9) !important;
 }
 
-/* line 45, ../sass/screen.scss */
 h1 {
   font-size: 35pt;
   color: inherit;
 }
 
-/* line 52, ../sass/screen.scss */
 div.sidebar {
   overflow: hidden;
   white-space: nowrap;
@@ -111,74 +96,63 @@ div.sidebar {
   background-color: #443a49;
   padding-top: 20px;
 }
-/* line 55, ../sass/screen.scss */
 div.sidebar a {
   text-decoration: none;
   color: inherit;
   border-bottom: 1px dotted #d3c6d8;
 }
-/* line 66, ../sass/screen.scss */
 div.sidebar .nav-on, div.sidebar nav div:hover {
   color: #443a49;
   background-color: #d3c6d8;
 }
-/* line 70, ../sass/screen.scss */
 div.sidebar nav div {
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
   transition-duration: .2s;
+  transition-property: color;
   padding: 15px;
   font-size: 20pt;
   color: #d3c6d8;
 }
-/* line 73, ../sass/screen.scss */
 div.sidebar nav div:hover {
   cursor: pointer;
 }
 
 @-webkit-keyframes float {
-  /* line 85, ../sass/screen.scss */
   from {
     -webkit-transform: translate3d(0, 0, 0);
   }
 
-  /* line 86, ../sass/screen.scss */
   to {
     -webkit-transform: translate3d(0, 20px, 0);
   }
 }
 
 @keyframes float {
-  /* line 91, ../sass/screen.scss */
   from {
     transform: translate3d(0, 0, 0);
   }
 
-  /* line 92, ../sass/screen.scss */
   to {
     transform: translate3d(0, 20px, 0);
   }
 }
 
-/* line 97, ../sass/screen.scss */
 div.main-container {
   width: 97%;
   float: right;
 }
-/* line 100, ../sass/screen.scss */
 div.main-container #home, div.main-container #about, div.main-container #work, div.main-container #contact {
   overflow: hidden;
   *zoom: 1;
   padding: 20px;
   color: #404040;
 }
-/* line 105, ../sass/screen.scss */
 div.main-container #home {
   position: relative;
 }
-/* line 107, ../sass/screen.scss */
 div.main-container #home div.main-title {
   font-size: 70pt;
   opacity: 0;
@@ -188,7 +162,6 @@ div.main-container #home div.main-title {
   margin-left: -249px;
   margin-top: -93px;
 }
-/* line 113, ../sass/screen.scss */
 div.main-container #home div.main-title div.main-sub-title {
   text-align: center;
   color: #828282;
@@ -196,7 +169,6 @@ div.main-container #home div.main-title div.main-sub-title {
   letter-spacing: 6px;
   font-style: italic;
 }
-/* line 121, ../sass/screen.scss */
 div.main-container #home div.arrow-down {
   -webkit-animation: float 2.5s infinite linear alternate;
   animation: float 2.5s infinite linear alternate;
@@ -206,11 +178,9 @@ div.main-container #home div.arrow-down {
   top: 79%;
   margin-left: -22px;
 }
-/* line 128, ../sass/screen.scss */
 div.main-container #home div.arrow-down:hover {
   cursor: pointer;
 }
-/* line 134, ../sass/screen.scss */
 div.main-container #about div.about-main {
   display: none;
   background-color: #ecf0f1;
@@ -228,7 +198,6 @@ div.main-container #about div.about-main {
   margin: 0 auto;
   margin-top: 15px;
 }
-/* line 145, ../sass/screen.scss */
 div.main-container #about div.about-main section {
   color: #5f5f5f;
   text-align: left;
@@ -238,11 +207,9 @@ div.main-container #about div.about-main section {
   -webkit-column-count: 3;
   -moz-column-count: 3;
 }
-/* line 153, ../sass/screen.scss */
 div.main-container #about div.about-main section::first-letter {
   font-size: 35pt;
 }
-/* line 157, ../sass/screen.scss */
 div.main-container #about div.about-main img.about-img {
   margin-bottom: 35px;
   width: 148px;
@@ -252,4 +219,104 @@ div.main-container #about div.about-main img.about-img {
   -ms-border-radius: 74px;
   -o-border-radius: 74px;
   border-radius: 74px;
+}
+div.main-container #work {
+  width: 100%;
+}
+div.main-container #work section {
+  padding-top: 20px;
+  margin-left: 25px;
+  text-align: justify;
+  line-height: 30px;
+  width: 35%;
+  font-size: 15pt;
+  float: left;
+}
+div.main-container #work div.tumblr {
+  padding: 30px;
+  display: none;
+  width: 60%;
+  background-color: #ecf0f1;
+  height: 700px;
+  float: right;
+  overflow-y: scroll;
+  -webkit-box-shadow: #828282 0 0 20px 5px;
+  -moz-box-shadow: #828282 0 0 20px 5px;
+  box-shadow: #828282 0 0 20px 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+div.main-container #work div.tumblr h1 {
+  padding-bottom: 30px;
+}
+div.main-container #work div.tumblr h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+div.main-container #work div.tumblr h1 a:hover {
+  color: #d3c6d8;
+  text-decoration: underline;
+}
+div.main-container #work div.tumblr div.tumblr-post {
+  overflow: hidden;
+  *zoom: 1;
+}
+div.main-container #work div.tumblr div.tumblr-post div.tumblr-post-title {
+  font-size: 25pt;
+  float: left;
+  padding-bottom: 7px;
+}
+div.main-container #work div.tumblr div.tumblr-post div.tumblr-post-date {
+  color: #aaa8a8;
+  float: right;
+}
+div.main-container #work div.tumblr div.tumblr-post div.tumblr-post-body {
+  clear: both;
+}
+div.main-container #contact div.contact-dialogue {
+  width: 30%;
+  margin: 0 auto;
+}
+div.main-container #contact div.contact-dialogue form {
+  padding-top: 3em;
+  text-align: center;
+}
+div.main-container #contact div.contact-dialogue form input, div.main-container #contact div.contact-dialogue form button, div.main-container #contact div.contact-dialogue form textarea {
+  border: 0;
+  margin: .5em auto;
+  font-size: 16pt;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  outline: none;
+  font-family: "Lato", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  div.main-container #contact div.contact-dialogue form input, div.main-container #contact div.contact-dialogue form button, div.main-container #contact div.contact-dialogue form textarea {
+    font-size: 12.5pt;
+  }
+}
+div.main-container #contact div.contact-dialogue form input, div.main-container #contact div.contact-dialogue form textarea {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  transition-property: box-shadow;
+  width: 85%;
+  padding: .7em;
+  color: rgba(0, 0, 0, 0.75);
+}
+div.main-container #contact div.contact-dialogue form input:focus, div.main-container #contact div.contact-dialogue form textarea:focus {
+  box-shadow: 0 0 7px #443a49;
+}
+div.main-container #contact div.contact-dialogue form button {
+  width: auto;
+  padding: .5em 1.4em;
+  background-color: #443a49;
+  color: white;
 }

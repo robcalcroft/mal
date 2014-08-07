@@ -13,6 +13,7 @@ var mal = {
 		mal.scrollspy();
 		mal.tooltipster();
 		mal.scrollToWatch();
+		mal.tumblrAPi.getPosts();
 		$('img').each(function() {this.draggable = false}) // stop people dragging images
 
 	},
@@ -28,6 +29,8 @@ var mal = {
         			$('.nav-' + id).addClass('nav-on');
         			if(id == 'about' && mal.first) {
         				$('div.about-main').fadeIn('slow');
+        			} else if(id == 'work' && mal.first) {
+        				$('div.tumblr').fadeIn('slow')
         			}
         		},
         		onLeave: function() {
@@ -64,6 +67,31 @@ var mal = {
 		$('div.arrow-down').click(function() {
 			mal.scrollTo_('about')
 		})
+	},
+
+	tumblrAPi: {
+		getPosts: function() {
+			$.getJSON('https://api.tumblr.com/v2/blog/everythingrob.tumblr.com/posts?api_key=ipNDzJSTo2fIY4act8zFBOiuHEYFLNG6mZ7UvkJ6aFSeftvKwx&callback=?&limit=50', function(data) {
+				mal.tumblrAPi.renderPosts(data.response.posts)
+			})
+		},
+
+		renderPosts: function(posts) {
+			$.each(posts, function(_, post) {
+				if (post.type != 'text') { return true }; // Same as 'continue'
+				var date = post.date.split(' ')[0].split('-'),
+					title = post.title,
+					body = post.body,
+					months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+					post = 
+						"<div class='tumblr-post'>"+
+							"<div class='tumblr-post-title'>" + title + "</div>"+
+							"<div class='tumblr-post-date'>" + date[2] + " " + months[date[1] - 1] + " " + date[0] + "</div>"+
+							"<div class='tumblr-post-body'>" + body + "</div>"+
+						"</div>";
+				$('.blog-main').append(post)
+			})
+		}
 	}
 
 }
