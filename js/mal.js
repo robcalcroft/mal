@@ -10,10 +10,11 @@ var mal = {
 		});
 		$('div.main-title').animate({top: '50%', opacity: 1}, {duration:500})
 		if($(document).scrollTop() == 0) { $('.nav-home').addClass('nav-on') }
+		mal.mailer.submitWatch();
 		mal.scrollspy();
 		mal.tooltipster();
 		mal.scrollToWatch();
-		mal.tumblrAPi.getPosts();
+		mal.tumblrApi.getPosts();
 		$('img').each(function() {this.draggable = false}) // stop people dragging images
 
 	},
@@ -69,10 +70,10 @@ var mal = {
 		})
 	},
 
-	tumblrAPi: {
+	tumblrApi: {
 		getPosts: function() {
 			$.getJSON('https://api.tumblr.com/v2/blog/everythingrob.tumblr.com/posts?api_key=ipNDzJSTo2fIY4act8zFBOiuHEYFLNG6mZ7UvkJ6aFSeftvKwx&callback=?&limit=50', function(data) {
-				mal.tumblrAPi.renderPosts(data.response.posts)
+				mal.tumblrApi.renderPosts(data.response.posts)
 			})
 		},
 
@@ -90,6 +91,38 @@ var mal = {
 							"<div class='tumblr-post-body'>" + body + "</div>"+
 						"</div>";
 				$('.blog-main').append(post)
+			})
+		}
+	},
+
+	mailer: {
+		submitWatch:function() {
+			$('form#contact-form').submit(function(e) {
+				e.preventDefault();
+				var name  = $(this).children('#contact-name').val(),
+					email = $(this).children('#contact-details').val(),
+					body  = $(this).children('#contact-desc').val();
+				$.ajax({
+					type: 'POST',
+					dataType: 'JSON',
+					url: 'php/mailer.php',
+					data: {
+						name: name,
+						email: email,
+						body: body
+					}
+				})
+				.success(function(result) {
+					console.log(result.message)
+					if(result.status != 1) {
+						alert('error');
+					} else {
+						alert('yey')
+					}
+				})
+				.fail(function() {
+					alert('error')
+				})
 			})
 		}
 	}

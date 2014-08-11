@@ -214,6 +214,10 @@ div.main-container {
 	}
 
 	#contact {
+		h3 {
+			padding-top: 15px;
+			font-size: 16pt;
+		}
 		div.contact-dialogue {
 			width: 30%;
 			margin: 0 auto;
@@ -244,6 +248,12 @@ div.main-container {
 					padding: .5em 1.4em;
 					background-color: $sidebar-background;
 					color: white;
+					&:hover {
+						background-color: rgba($sidebar-background, .85);
+					}
+					&:active {
+						background-color: darken($sidebar-background, 7.5%);
+					}
 				}
 			}
 		}

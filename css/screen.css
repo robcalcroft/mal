@@ -277,6 +277,10 @@ div.main-container #work div.tumblr div.tumblr-post div.tumblr-post-date {
 div.main-container #work div.tumblr div.tumblr-post div.tumblr-post-body {
   clear: both;
 }
+div.main-container #contact h3 {
+  padding-top: 15px;
+  font-size: 16pt;
+}
 div.main-container #contact div.contact-dialogue {
   width: 30%;
   margin: 0 auto;
@@ -320,4 +324,10 @@ div.main-container #contact div.contact-dialogue form button {
   padding: .5em 1.4em;
   background-color: #443a49;
   color: white;
+}
+div.main-container #contact div.contact-dialogue form button:hover {
+  background-color: rgba(68, 58, 73, 0.85);
+}
+div.main-container #contact div.contact-dialogue form button:active {
+  background-color: #302934;
 }

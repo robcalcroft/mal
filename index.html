@@ -62,11 +62,13 @@
 			</div>
 			<div id="contact">
 				<h1>Contact</h1>
+				<h3>Got a question or want to talk to me about a project?</h3>
 				<div class="contact-dialogue">
 					<form id='contact-form'>
-						<input type="text" id="contact-name" placeholder='Your name'>
-						<textarea style='resize:none;' name="c" id="contact-desc" cols="30" rows="10" placeholder='Your message to Mal'></textarea>
-						<button type='submit' onclick='event.preventDefault();'>Send message</button>
+						<input type="text" id="contact-name" placeholder='Your name' required>
+						<input type="email" id='contact-details' placeholder='Your email address' required>
+						<textarea style='resize:none;' name="c" id="contact-desc" cols="30" rows="10" placeholder='Your message to Mal' required></textarea>
+						<button type='submit'>Send message</button>
 					</form>
 				</div>
 			</div>
