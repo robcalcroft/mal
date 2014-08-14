@@ -115,13 +115,13 @@ var mal = {
 				.success(function(result) {
 					console.log(result.message)
 					if(result.status != 1) {
-						alert('error');
+						$('.contact-error').fadeIn().delay(7500).fadeOut()
 					} else {
-						alert('yey')
+						$('.contact-success').fadeIn().delay(7500).fadeOut()
 					}
 				})
 				.fail(function() {
-					alert('error')
+					$('.contact-error').fadeIn().delay(7500).fadeOut()
 				})
 			})
 		}

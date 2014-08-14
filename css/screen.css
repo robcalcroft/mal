@@ -70,7 +70,7 @@ body, html {
   background-color: #d3c6d8;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  min-width: 1300px;
+  min-width: 479px;
 }
 
 div.container {
@@ -145,6 +145,16 @@ div.main-container {
   width: 97%;
   float: right;
 }
+@media screen and (max-width: 1300px) {
+  div.main-container {
+    width: 93%;
+  }
+}
+@media screen and (max-width: 595px) {
+  div.main-container {
+    width: 87%;
+  }
+}
 div.main-container #home, div.main-container #about, div.main-container #work, div.main-container #contact {
   overflow: hidden;
   *zoom: 1;
@@ -169,6 +179,18 @@ div.main-container #home div.main-title div.main-sub-title {
   font-size: 20pt;
   letter-spacing: 6px;
   font-style: italic;
+}
+@media screen and (max-width: 630px) {
+  div.main-container #home div.main-title div.main-sub-title {
+    font-size: 15pt;
+  }
+}
+@media screen and (max-width: 630px) {
+  div.main-container #home div.main-title {
+    font-size: 57.5pt;
+    margin-left: -206px;
+    margin-top: -49px;
+  }
 }
 div.main-container #home div.arrow-down {
   -webkit-animation: float 2.5s infinite linear alternate;
@@ -211,6 +233,15 @@ div.main-container #about div.about-main section {
 div.main-container #about div.about-main section::first-letter {
   font-size: 35pt;
 }
+@media screen and (max-width: 1050px) {
+  div.main-container #about div.about-main section {
+    font-size: 11pt;
+    line-height: 20px;
+    column-count: 1;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+  }
+}
 div.main-container #about div.about-main img.about-img {
   margin-bottom: 35px;
   width: 148px;
@@ -220,6 +251,12 @@ div.main-container #about div.about-main img.about-img {
   -ms-border-radius: 74px;
   -o-border-radius: 74px;
   border-radius: 74px;
+}
+@media screen and (max-width: 1300px) {
+  div.main-container #about div.about-main {
+    padding: 20px;
+    width: 95%;
+  }
 }
 div.main-container #work {
   width: 100%;
@@ -232,6 +269,14 @@ div.main-container #work section {
   width: 35%;
   font-size: 15pt;
   float: left;
+}
+@media screen and (max-width: 1100px) {
+  div.main-container #work section {
+    float: none;
+    width: 95%;
+    margin-bottom: 50px !important;
+    text-align: left;
+  }
 }
 div.main-container #work div.tumblr {
   padding: 30px;
@@ -261,6 +306,13 @@ div.main-container #work div.tumblr h1 a:hover {
   color: #d3c6d8;
   text-decoration: underline;
 }
+@media screen and (max-width: 1100px) {
+  div.main-container #work div.tumblr {
+    float: none;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
 div.main-container #work div.tumblr div.tumblr-post {
   overflow: hidden;
   *zoom: 1;
@@ -285,9 +337,30 @@ div.main-container #contact div.contact-dialogue {
   width: 30%;
   margin: 0 auto;
 }
+@media screen and (max-width: 1400px) {
+  div.main-container #contact div.contact-dialogue {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 850px) {
+  div.main-container #contact div.contact-dialogue {
+    width: 100%;
+  }
+}
 div.main-container #contact div.contact-dialogue form {
   padding-top: 3em;
   text-align: center;
+}
+div.main-container #contact div.contact-dialogue form .contact-error, div.main-container #contact div.contact-dialogue form .contact-success {
+  padding: 10px;
+  font-size: 15pt;
+  display: none;
+}
+div.main-container #contact div.contact-dialogue form .contact-success {
+  color: #27ae60;
+}
+div.main-container #contact div.contact-dialogue form .contact-error {
+  color: #e74c3c;
 }
 div.main-container #contact div.contact-dialogue form input, div.main-container #contact div.contact-dialogue form button, div.main-container #contact div.contact-dialogue form textarea {
   border: 0;

@@ -23,7 +23,7 @@ body,html {
 	background-color: $main-background;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
-	min-width: 1300px;
+	min-width: 479px;
 }
 
 div.container {
@@ -98,6 +98,12 @@ div.sidebar {
 
 div.main-container {
 	width: 97%;
+	@media screen and (max-width: 1300px) {
+		width: 93%;
+	}
+	@media screen and (max-width: 595px) {
+		width: 87%;
+	}
 	float: right;
 	#home, #about, #work, #contact {
 		@include clearfix();
@@ -118,6 +124,13 @@ div.main-container {
 				font-size: 20pt;
 				letter-spacing: 6px;
 				font-style: italic;
+				@media screen and (max-width: 630px) {
+					font-size: 15pt;
+				}
+			}
+			@media screen and (max-width: 630px) {
+				font-size: 57.5pt;
+				margin-left: -206px; margin-top: -49px;
 			}
 		}
 		div.arrow-down {
@@ -155,11 +168,22 @@ div.main-container {
 				&::first-letter {
 					font-size: 35pt;
 				}
+				@media screen and (max-width: 1050px) {
+					font-size: 11pt;
+					line-height: 20px;
+					column-count: 1;
+					-webkit-column-count: 1;
+					-moz-column-count: 1;
+				}
 			}
 			img.about-img {
 				margin-bottom: 35px;
 				@include rounded-img(148px);
 
+			}
+			@media screen and (max-width: 1300px) {
+				padding: 20px;
+				width: 95%;
 			}
 		}
 	}
@@ -173,6 +197,12 @@ div.main-container {
 			width: 35%;
 			font-size: 15pt;
 			float: left;
+			@media screen and (max-width: 1100px) {
+				float: none;
+				width: 95%;
+				margin-bottom: 50px !important;
+				text-align: left;
+			}
 		}
 		div.tumblr {
 			h1 {
@@ -185,6 +215,11 @@ div.main-container {
 						text-decoration: underline;
 					}
 				}
+			}
+			@media screen and (max-width: 1100px) {
+				float: none;
+				width: 95%;
+				margin: 0 auto;
 			}
 			padding: 30px;
 			display: none;
@@ -221,7 +256,20 @@ div.main-container {
 		div.contact-dialogue {
 			width: 30%;
 			margin: 0 auto;
+			@media screen and (max-width: 1400px) {
+				width: 60%;
+			}
+			@media screen and (max-width: 850px) {
+				width: 100%;
+			}
 			form {
+				.contact-error, .contact-success {
+					padding: 10px;
+					font-size: 15pt;
+					display: none;
+				}
+				.contact-success { color: #27ae60 }
+				.contact-error { color: #e74c3c }
 				padding-top: 3em;
 				input, button, textarea {
 					border: 0;
