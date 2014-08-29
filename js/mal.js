@@ -72,7 +72,7 @@ var mal = {
 
 	tumblrApi: {
 		getPosts: function() {
-			$.getJSON('https://api.tumblr.com/v2/blog/everythingrob.tumblr.com/posts?api_key=ipNDzJSTo2fIY4act8zFBOiuHEYFLNG6mZ7UvkJ6aFSeftvKwx&callback=?&limit=50', function(data) {
+			$.getJSON('https://api.tumblr.com/v2/blog/mpcrc.tumblr.com/posts?api_key=ipNDzJSTo2fIY4act8zFBOiuHEYFLNG6mZ7UvkJ6aFSeftvKwx&callback=?&limit=50', function(data) {
 				mal.tumblrApi.renderPosts(data.response.posts)
 			})
 		},
