@@ -1,6 +1,6 @@
 <?php 
 
-	$to      = 'rob@calcroft.com';
+	$to      = 'malpeacock@yahoo.co.uk';
 	$subject = 'Mal Peacock Site - User Message';
 	$packet  = $_POST;
 
